@@ -1,0 +1,33 @@
+.card {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 50%;
+  margin-left: 5rem;
+  padding-bottom: 1rem;
+}
+
+.btn-primary {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  width: 50%;
+}
+
+.inner {
+  margin-left: 2rem;
+}
+
+.innerInner {
+  margin-left: 4rem;
+}
+
+.outer, .content {
+  border:1px solid rgb(231, 231, 231);
+  border-radius: 6px;
+}
+
+.content {
+  margin-bottom: 1rem;
+}

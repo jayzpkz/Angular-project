@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-xs-4 card">
+    <div class="">
+      <h2>User Buttons</h2>
+      <hr>
+    </div>
+    <div class="" *ngFor="let data of dataList | keyvalue:originalOrder">
+      <button (click)="onNameClick($event)" id="{{ data.value.id }}" class="btn btn-primary">
+        {{ data.value.name }}
+      </button>
+    </div>
+  </div>
+  <div class="col-xs-4 card" *ngIf="clicked">
+    <div class="">
+      <h2>User Details</h2>
+      <hr>
+    </div>
+    <div class="">
+      <p class="outer"><b>ID: </b>{{ data.id }}</p>
+      <p class="outer"><b>NAME: </b>{{ data.name }}</p>
+      <p class="outer"><b>USERNAME: </b>{{ data.username }}</p>
+      <p class="outer"><b>EMAIL: </b>{{ data.email }}</p>
+      <div class="content">
+        <p><b>ADDRESS: </b></p>
+        <p class="inner"><b>STREET: </b>{{ data.address.street }}</p>
+        <p class="inner"><b>SUITE: </b>{{ data.address.suite }}</p>
+        <p class="inner"><b>CITY: </b>{{ data.address.city }}</p>
+        <p class="inner"><b>ZIPCODE: </b>{{ data.address.zipcode }}</p>
+        <p class="inner"><b>GEO: </b></p>
+        <p class="innerInner"><b>LAT: </b>{{ data.address.geo.lat }}</p>
+        <p class="innerInner"><b>LNG: </b>{{ data.address.geo.lng }}</p>
+      </div>
+      <p class="outer"><b>PHONE: </b>{{ data.phone }}</p>
+      <p class="outer"><b>WEBSITE: </b>{{ data.website }}</p>
+      <div class="content">
+        <p><b>COMPANY: </b></p>
+        <p class="inner"><b>NAME: </b>{{ data.company.name }}</p>
+        <p class="inner"><b>CATCH PHRASE: </b>{{ data.company.catchPhrase }}</p>
+        <p class="inner"><b>BS: </b>{{ data.company.bs }}</p>
+      </div>
+    </div>
+  </div>
+</div>
