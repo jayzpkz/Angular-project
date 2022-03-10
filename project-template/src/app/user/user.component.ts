@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { map } from 'rxjs/operators';
-
 import { KeyValue } from '@angular/common';
 
 import { Data } from './user.model';
@@ -30,15 +28,6 @@ export class UserComponent implements OnInit {
    */
   fetchDataAsPromise() {
     return this.http.get<Data[]>('https://jsonplaceholder.typicode.com/users')
-      .pipe(map(responseData => {
-        const dataArray: Data[] = [];
-        for (const key in responseData) {
-          if (responseData.hasOwnProperty(key)) {
-            dataArray.push(responseData[key])
-          }
-        }
-        return dataArray;
-      }))
       .subscribe(data => {
         this.dataList = data;
       });
