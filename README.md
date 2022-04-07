@@ -1,4 +1,4 @@
-# Angular-task
+# Angular-project
 
 • A simple Angular web application that gets user JSON data from [this URL](https://jsonplaceholder.typicode.com/users).
 
