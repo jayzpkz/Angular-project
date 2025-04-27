@@ -12,7 +12,7 @@
 
 1\) Make sure you are in the `project-template` folder.
 
-2\) Type `ns serve` in the terminal
+2\) Type `ng serve` in the terminal
 
 \* If there is a problem, try to type `npm i` or `npm install` and then `ng serve`.
 
